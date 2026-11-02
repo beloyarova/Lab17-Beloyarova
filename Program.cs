@@ -122,32 +122,40 @@ int FindIndex(int[] numbers, int target)
 // Console.WriteLine(FindIndex(scores, 100));
 
 // Шаг 7
-int[] scores = new int[7];
+// int[] scores = new int[7];
 
-for (int i = 0; i < scores.Length; i++)
+// for (int i = 0; i < scores.Length; i++)
+// {
+//     Console.Write($"Результат {i + 1}: ");
+//     scores[i] = Convert.ToInt32(Console.ReadLine());
+// }
+
+// Console.WriteLine();
+// Console.WriteLine(">>> Анализ результатов <<<");
+// Console.WriteLine();
+// Console.WriteLine($"Сумма: {SumArray(scores)}");
+// Console.WriteLine($"Минимум: {FindMin(scores)}");
+// Console.WriteLine($"Максимум: {FindMax(scores)}");
+// Console.WriteLine($"Результатов 50 и больше: {CountAtLeast(scores, 50)}");
+// Console.WriteLine();
+
+// Console.Write("Какой результат найти: ");
+// int target = int.Parse(Console.ReadLine());
+// int index = FindIndex(scores, target);
+
+// if (index == -1)
+// {
+//     Console.WriteLine("Результат не найден");
+// }
+// else
+// {
+//     Console.WriteLine($"Первый индекс: {index}");
+// }
+// Самостоятельная работа 
+
+double CalculateAverage(int[] numbers)
 {
-    Console.Write($"Результат {i + 1}: ");
-    scores[i] = Convert.ToInt32(Console.ReadLine());
+    return (double)SumArray(numbers) / numbers.Length;
 }
-
-Console.WriteLine();
-Console.WriteLine(">>> Анализ результатов <<<");
-Console.WriteLine();
-Console.WriteLine($"Сумма: {SumArray(scores)}");
-Console.WriteLine($"Минимум: {FindMin(scores)}");
-Console.WriteLine($"Максимум: {FindMax(scores)}");
-Console.WriteLine($"Результатов 50 и больше: {CountAtLeast(scores, 50)}");
-Console.WriteLine();
-
-Console.Write("Какой результат найти: ");
-int target = int.Parse(Console.ReadLine());
-int index = FindIndex(scores, target);
-
-if (index == -1)
-{
-    Console.WriteLine("Результат не найден");
-}
-else
-{
-    Console.WriteLine($"Первый индекс: {index}");
-}
+int[] values = { 1, 2 };
+Console.WriteLine(CalculateAverage(values));
